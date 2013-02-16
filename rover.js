@@ -20,7 +20,7 @@ window.showdown_url_replace = function( url ) {
 }
 
 var client = new Dropbox.Client({
-		key: "OmgelmwkX6A=|DKcxwZXyEzMxlWUoKdWi0Wmb3WDTj9JIs55wa7frZg==", 
+		key: "cZSWURFKd6A=|61PKs6a5eJspi8tbGTzAuHn6qXPaZJiDCMhWp2XQ9A==", 
 		sandbox: true
 	});
 

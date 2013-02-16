@@ -6,6 +6,8 @@ var doc_title = document.getElementById('doc-title');
 var preview_area = document.getElementById('preview');
 var showdown = new Showdown.converter();
 
+var currentFile = '';
+
 window.showdown_url_replace = function( url ) {
 	var base = doc_title.getAttribute('rel').replace(/\\/g,'/').replace(/\/[^\/]*$/, '');
 	
@@ -117,6 +119,9 @@ var dropbox_browser_load_folder = function( path, parent ) {
 
 
 var editor_load_file = function( file ) {
+  // Remember filename
+  currentFile = file;
+  
 	// Empty the editor
 	editor_area.className += 'loading';
 	editor_area.innerText = '';
@@ -219,7 +224,7 @@ document.onkeydown = function(e) {
 	// Override Cmd+S for saving
 	if ( e.metaKey && e.keyCode >= 65 && e.keyCode <= 90 ) {
 		if ( String.fromCharCode(e.keyCode) == 'S' ) {
-			client.writeFile( 'index.md', editor_area.innerText, function( error, stat ) {
+			client.writeFile( currentFile, editor_area.innerText, function( error, stat ) {
 				console.log( error, stat );
 			});
 			

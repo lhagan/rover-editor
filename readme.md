@@ -24,7 +24,7 @@ It was inspired by [Mou](http://mouapp.com/), created by [Chen Luo](http://chenl
 
 ## Demo
 
-Please visit [rover.konstruktors.com](http://rover.konstruktors.com) and authorise with your Dropbox account to try it out.
+Please visit [the demo](https://dl.dropbox.com/u/103808/rover-editor/index.html) and authorise with your Dropbox account to try it out.
 
 ## Rover Uses
 

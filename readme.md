@@ -34,7 +34,14 @@ Please visit [rover.konstruktors.com](http://rover.konstruktors.com) and authori
 
 * 	[dropbox-js](https://github.com/dropbox/dropbox-js) by [Dropbox](https://github.com/dropbox) for synchronisation with Dropbox.
 
+* 	[Iconic](http://somerandomdude.com/work/iconic/) UI icons by P.J. Onori.
+
 ## Changelog
+
+### Feb 16, 2013 (lhagan)
+
+* 	Added navbar
+* 	Bug fixes
 
 ### Sep 27, 2012
 

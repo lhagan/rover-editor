@@ -1,11 +1,15 @@
+
 html, body { width:100%; height:100%; }
 body { color:#333; font:16px/1.3 sans-serif; margin:0; padding:0; background:#eee; }
 
-#pages { overflow:hidden; }
+#pages {
+  overflow: hidden;
+  padding-top: 3em;
+}
 #pages .page { display:block; width:100%; float:left; vertical-align:top; }
 #pages .page-in { width:100%; clear:both; }
 
-#home { padding:0 2em; }
+#home { padding:2em 2em; }
 #dropbox { }
 #dropbox-browser { visibility:hidden; background:#777; border-radius:4px; padding:0.2em 0; }
 #dropbox-browser a { display:block; text-decoration:none; color:#fff; text-shadow:-1px 1px 0 #555; padding:0.75em 2em; border-bottom:1px solid #666; }
@@ -32,7 +36,51 @@ body { color:#333; font:16px/1.3 sans-serif; margin:0; padding:0; background:#ee
 
 #rover { box-sizing:border-box; width:90%; min-height:100%; margin:0 auto; padding:3em 0 4em 0; white-space:pre-wrap; font:18px/1.3 menlo, monospace; outline:none; }
 #rover.loading { background:url('images/ajax-loader.gif') no-repeat center center; }
-.page-rover header { background:#ddd; padding:0 1em; display:block; text-align:center; z-index:50; }
+
 #doc-title { padding:1em; display:inline-block; font-weight:normal; }
 
 #preview { box-sizing:border-box; width:90%; margin:1em auto; }
+
+@font-face {
+  font-family: 'IconicStroke';
+  src: local("IconicStroke"), url("./iconic_stroke.otf") format("opentype")
+}
+
+header { 
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #ddd;
+  padding: 0 1em;
+  display:block;
+  text-align: center;
+  z-index:50;
+}
+
+header .icon {
+  display: inline-block;
+  font-family: 'IconicStroke';
+  color: #666;
+  font-size: 24px;
+}
+
+#backButton {
+  float: left;
+}
+
+#previewButton {
+  float: right;
+}
+
+header .button {
+  padding-top: 10px;
+  display: none;
+}
+
+.arrow_left:before {
+  content:'\2190';
+}
+
+.eye:before {
+  content:'\e025';
+}

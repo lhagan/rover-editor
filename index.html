@@ -12,13 +12,18 @@
 </head>
 <body>
 
+<header>
+	<a class="button" id="backButton" href="#"><span class='icon arrow_left'></span></a>
+	<strong id="doc-title">Dropbox</strong>
+	<a class="button" id="previewButton" href="#"><span class='icon eye'></span></a>
+</header>
+
 <nav id="pages">
 	<ul>
 		<li class="page page-home">
 			<article class="page-in">
 				<div id="home">
 					<section id="dropbox">
-						<h1>Dropbox</h1>
 						<nav id="dropbox-browser"></nav>
 						<a id="dropbox-auth" href="#dropbox-auth">Authorize with Dropbox</a>
 					</section>
@@ -28,9 +33,6 @@
 
 		<li class="page page-rover">
 			<article class="page-in">
-				<header>
-					<strong id="doc-title"></strong>
-				</header>
 				<pre id="rover" spellcheck="true" contenteditable="true"></pre>
 			</article>
 		</li>

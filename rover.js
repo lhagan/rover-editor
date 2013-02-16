@@ -4,6 +4,9 @@ var dropbox_browser = document.getElementById('dropbox-browser');
 var editor_area = document.getElementById('rover');
 var doc_title = document.getElementById('doc-title');
 var preview_area = document.getElementById('preview');
+var backButton = document.getElementById('backButton');
+var previewButton = document.getElementById('previewButton');
+
 var showdown = new Showdown.converter();
 
 var currentFile = '';
@@ -160,6 +163,21 @@ var panes = new Swipe( document.getElementById('pages'), {
 			} else {
 				editor_area.blur();
 			}
+      
+      // Hide preview and back button, update title where needed
+      if ( b == 0 ) {
+        backButton.style.display = 'none';
+        previewButton.style.display = 'none';
+        doc_title.innerText = "Dropbox"
+      } else if (b == 1) {
+        backButton.style.display = 'block';
+        previewButton.style.display = 'block';
+        editor_area.removeAttribute('contenteditable');
+        editor_area.addAttribute('contenteditable');
+      } else {
+        backButton.style.display = 'block';
+        previewButton.style.display = 'none';
+      }
 		}
 	});
 
@@ -264,6 +282,16 @@ var dropbox_touch_handler = function(e) {
 
 dropbox_browser.onclick = dropbox_touch_handler;
 dropbox_browser.ontouchstart = dropbox_touch_handler;
+
+backButton.onclick = function(e) {
+  panes.prev()
+  e.preventDefault();
+}
+
+previewButton.onclick = function(e) {
+  panes.next()
+  e.preventDefault();
+}
 
 window.addEventListener( 'popstate', function(e) {
    	if ( history.state == 'edit' ) {
